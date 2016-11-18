@@ -1,8 +1,9 @@
 % high boost filter %
 clear all;
-img = imread('Picture1.png');
+img = imread('LennaRGB.png');
 img = rgb2gray(img);
-w = [-1 -1 -1; -1 9.1 -1; -1 -1 -1] / 9; % high boost filter's mask
+img = double(img);
+w = [-1 -1 -1; -1 8.2 -1; -1 -1 -1]; % high boost filter's mask
 [row col] = size(img);
 for i=2:1:row-1
     for j=2:1:col-1
@@ -12,5 +13,6 @@ for i=2:1:row-1
             + w(9) * img(i+1, j+1);     % apply the mask
     end
 end
-subplot(1,2,1),imshow(img);
-subplot(1,2,2),imshow(new_image);
+% subplot(1,2,1),imshow(uint8(img));
+% subplot(1,2,2),
+imshow(uint8(new_image));

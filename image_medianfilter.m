@@ -1,6 +1,6 @@
 % median filter %
 clear all;
-img = imread('noise.png');
+img = imread('LennaRGB.png');
 img = rgb2gray(img);
 %img = double(img);
 [row col] = size(img);

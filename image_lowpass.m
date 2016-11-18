@@ -1,6 +1,6 @@
 %low pass filter%
 clear all;
-img = imread('noise.png');
+img = imread('LennaRGB.png');
 img = rgb2gray(img);
 img = double(img); % multiplication ==> requires the image to be converted to double.
 w = [1 1 1; 1 1 1; 1 1 1] / 9; % average filter mask
@@ -13,5 +13,5 @@ for i=2:1:row-1
             + w(9) * img(i+1, j+1);
     end
 end
-subplot(1,2,1),imshow(uint8(img)); % convert the image back to integer.
-subplot(1,2,2),imshow(uint8(new_image));
+%subplot(1,2,1),imshow(uint8(img)); % convert the image back to integer.
+imshow(uint8(new_image));
