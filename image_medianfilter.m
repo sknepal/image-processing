@@ -2,7 +2,7 @@
 clear all;
 img = imread('LennaRGB.png');
 img = rgb2gray(img);
-%img = double(img);
+img = double(img);
 [row col] = size(img);
 for i=2:1:row-1
     for j=2:1:col-1  
