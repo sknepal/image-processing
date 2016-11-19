@@ -2,7 +2,7 @@
 clear all;
 img = imread('LennaRGB.png');
 img = rgb2gray(img);
-img = double(img); % multiplication ==> requires the image to be converted to double.
+img = double(img); 
 w = [1 1 1; 1 1 1; 1 1 1] / 9; % average filter mask
 [row col] = size(img);
 for i=2:1:row-1

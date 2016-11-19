@@ -1,6 +1,6 @@
 % high boost filter %
 clear all;
-img = imread('LennaRGB.png');
+img = imread('Picture2.png');
 img = rgb2gray(img);
 img = double(img);
 w = [-1 -1 -1; -1 8.2 -1; -1 -1 -1]; % high boost filter's mask

@@ -13,5 +13,8 @@ for i=2:1:row-1
             + w(9) * img(i+1, j+1); % apply the mask
     end
 end
-%subplot(1,2,1),imshow(uint8(img));
+%subplot(1,2,1),
+figure(1);
+imshow(uint8(img));
+figure(2);
 imshow(uint8(new_image));

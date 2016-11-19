@@ -18,4 +18,19 @@ for i=2:row-1
 end
 %subplot(1,2,1),imshow(uint8(img));
 
+figure(1)
+imshow(uint8(img));
+
+figure(2);
 imshow(uint8(new_image));
+
+
+for i=2:row-1
+    for j=2:col-1 
+        nimg(i, j) = img(i, j);
+    end
+end
+sharpened = nimg - new_image;
+figure(3);
+imshow(uint8(sharpened));
+
